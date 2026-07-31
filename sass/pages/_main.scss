@@ -1,0 +1,204 @@
+@use "../layout/global" as *;
+@use "../utilites/var" as *;
+@use "../utilites/mix" as *;
+
+.todo-list{
+    flex:1 0 auto; 
+    .insert-task {
+        @extend %flex;
+        justify-content: center;
+        #task-sub {
+            min-width:80vw;
+            height:5vh;
+            margin: 2*$padd-y $padd-y;
+            background-color: $body-color;
+            border:3px solid #ced4da;
+            padding: $padd-x;
+            border-radius: $radius-btn;
+            -webkit-border-radius: $radius-btn;
+            -moz-border-radius: $radius-btn;
+            -ms-border-radius: $radius-btn;
+            -o-border-radius: $radius-btn;
+            font-size: 18px;
+}
+        &:focus {
+            border:3px solid $header-color;
+
+        }
+        a {
+            color: $header-color;
+            background-color: $header-color;
+            color:$active-color;
+            min-width:5vw;
+            text-align: center;
+            padding: $padd-x $padd-y;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: $radius-btn;
+            -webkit-border-radius: $radius-btn;
+            -moz-border-radius: $radius-btn;
+            -ms-border-radius: $radius-btn;
+            -o-border-radius: $radius-btn;
+            transition: $transition;
+            -webkit-transition: $transition;
+            -moz-transition: $transition;
+            -ms-transition: $transition;
+            -o-transition: $transition;
+}
+        :hover {
+            background-color:$active-color ;
+            color: $header-color;
+        }
+    }
+    .todo-cont{
+        table {
+            max-width:85%;
+            margin: $padd-y auto;
+            text-align: center;
+            font-size: 18px;
+            thead {
+                th{
+                    border:2px solid $active-color;
+                    background-color: $header-color;
+                    color:$body-color;
+                    border-radius: $radius-btn;
+                    -webkit-border-radius: $radius-btn;
+                    -moz-border-radius: $radius-btn;
+                    -ms-border-radius: $radius-btn;
+                    -o-border-radius: $radius-btn;
+                    padding: $padd-x;
+}
+                :nth-child(2){
+                    width:90%;
+                }
+            }
+            tbody{
+                padding-bottom: 60px;
+                tr {
+                    border-bottom: 2px solid yellow;
+                }
+                background-color: $body-color;
+                color:$text-color;
+                font-weight: 700;
+                td{
+                    padding: $padd-x;
+                    cursor: pointer;
+                    border-bottom:2px solid $header-color;
+                    .container {
+                        display: block;
+                        position: relative;
+                        margin-bottom: 0px;
+                        font-size: 22px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+                    #terms {
+                        position: absolute;
+                        height: 0;
+                        width: 0;
+                        opacity: 0;
+                    }
+                    .custom-checkbox{
+                        display: inline-block;
+                        align-items: center;
+                        position: relative;
+                        font-size: 18px;
+                        user-select: none;
+                        left: 0;
+                    }
+                    .checkmark {
+                        position: absolute;
+                        bottom:10%;
+                        right:50%;
+                        transform: translate(50%,30%);
+                        height:30px;
+                        min-width: 40px;
+                        background-color: $header-color;
+                        -webkit-transform: translate(50%,30%);
+                        -moz-transform: translate(50%,30%);
+                        -ms-transform: translate(50%,30%);
+                        -o-transform: translate(50%,30%);
+                    }
+                    .custom-checkbox:hover .checkmark {
+                        background-color: $active-color;
+                    }
+                    .checkmark::after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        left:10%;
+                        bottom:0%;
+                        height:30px;
+                        width: 40px;
+                        background-image: url('../../img/logo.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        }
+                    .custom-checkbox input:checked ~ .checkmark::after{
+                        display: block;
+                    }
+                    input:checked ~ .checkmark {
+                        background-color: transparent;
+                        transition: $transition;
+                        -webkit-transition: $transition;
+                        -moz-transition: $transition;
+                        -ms-transition: $transition;
+                        -o-transition: $transition;
+}
+                    .delete-icon {
+                        font-size: 26px;
+                    }
+                    .delete-icon:hover{
+                        color:red;
+                        font-size: 32px;
+                        transition: $transition;
+                        -webkit-transition: $transition;
+                        -moz-transition: $transition;
+                        -ms-transition: $transition;
+                        -o-transition: $transition;
+}
+                }
+            }
+        }
+    }
+    .todo-links {
+        max-width:80%;
+        margin:2*$padd-y auto;
+        @extend %flex;
+        a {
+            min-width:20%;
+            text-align: center;
+            font-weight:700;
+            padding: ($padd-x + $padd-y);
+            background-color: $header-color;
+            color:$body-color;
+            transition: $transition;
+            border-radius: $radius-btn;
+            -webkit-border-radius: $radius-btn;
+            -moz-border-radius: $radius-btn;
+            -ms-border-radius: $radius-btn;
+            -o-border-radius: $radius-btn;
+            -webkit-transition: $transition;
+            -moz-transition: $transition;
+            -ms-transition: $transition;
+            -o-transition: $transition;
+}
+        a:hover {
+            background-color: $active-color;
+            color:$header-color;
+        }
+    }
+            @media (max-width:$small) {
+            .todo-links{
+                max-width: 100%;
+                            a {
+                margin: 0 5px;
+                padding: 15px 0;
+            }
+            }
+
+
+        }
+}

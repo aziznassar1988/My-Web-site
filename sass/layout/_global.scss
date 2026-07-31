@@ -1,0 +1,33 @@
+@use "../utilites/var" as *;
+@use "../utilites/mix" as *;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-type;
+}
+ul {
+    list-style: none;
+}
+ul li{
+    font-size:$main-font;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size:18px;
+}
+body {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    background-color: $body-color;
+    color:$text-color;
+    margin: 0;
+}
+@media (max-width:$large) {
+    body{
+        display: flex;
+    }
+
+}

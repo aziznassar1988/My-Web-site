@@ -1,0 +1,13 @@
+@function change_color($color){
+    @if(lightness($color) > 70){
+        @return #333;
+    }@else {
+        @return #fff;
+    }
+}
+
+
+@mixin color-change($color){
+    background-color:$color; 
+    color:change_color($color);
+}

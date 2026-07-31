@@ -1,0 +1,90 @@
+@use "../layout/global" as *;
+@use "../utilites/var" as *;
+@use "../utilites/mix" as *;
+.nav  {  
+    flex:1;  
+     @extend %flex;
+     background-color: $header-color;
+     color:$body-color;
+             padding:2px $padd-y;
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-toggle{
+        display:none;
+        flex-direction: column;
+        gap:5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        .bar {
+            width:25px;
+            height:3px;
+            background-color: $body-color;
+        }
+        @media (max-width:$small) {
+            display: flex;
+        }
+    }
+    .nav-links {
+        @extend %flex;
+            @media (max-width:$small) {
+                    position: fixed;
+                    top: 60px; /* Adjust based on navbar height */
+                    right: 0;
+                    bottom: 0;
+                    width: 70%; /* Covers part of the screen */
+                    background-color: $header-color;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 2rem;
+                    gap: 3rem;
+                    /* Hide off-screen by default */
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease-in-out;
+                    z-index: 100;
+                    @media (max-width:$small){
+                        padding: 5rem 0;
+                        margin-top: 1.65rem;
+                        :hover{
+                            background-color: $active-color;
+                            color:$header-color;
+                            border-bottom-color: $body-color;
+                        }
+                    }
+                    &.active {
+                        transform: translateX(0);
+                    }
+                    li{
+                    @media (max-width:$small) {
+                        border-bottom: 2px solid $active-color;
+                        width:100%;
+                        padding-bottom: 5px;
+                    }
+                    }
+            }
+        a {
+            font-weight: 600;
+            color: $body-color;
+            margin:0 5px;
+            padding: $padd-y;
+            border:2px solid $active-color;
+            border-radius: $radius-btn;
+            -webkit-border-radius: $radius-btn;
+            -moz-border-radius: $radius-btn;
+            -ms-border-radius: $radius-btn;
+            -o-border-radius: $radius-btn;
+            @media (max-width:$small) {
+                border: none;
+            }
+        }
+        a:hover{
+            background-color: $active-color;
+            color: $header-color;
+            border-color: $body-color;
+
+        }
+    }
+}

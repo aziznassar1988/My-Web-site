@@ -1,0 +1,102 @@
+.weather-cont {
+  max-width: 40vw;
+  max-height: 80vh;
+  background: linear-gradient(to right, #1a252f, #5c738a);
+  margin: 10px auto;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+@media (max-width: 767px) {
+  .weather-cont {
+    max-width: 70vw;
+  }
+}
+.weather-serach {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.error-msg {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+  text-align: center;
+}
+#city,
+#submit {
+  min-height: 5vh;
+  background-color: lighten(#bbcbea);
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#city {
+  min-width: 25vw;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+#submit {
+  max-width: 10vw;
+  margin-right: 2px;
+  padding: 5px 10px;
+  text-align: center;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#submit:hover {
+  background-color: #fadd41;
+  color: #2c3e50;
+}
+.body-weather {
+  display: none;
+}
+.img-weather {
+  max-width: 20vw;
+  margin: 10px auto;
+  text-align: center;
+  flex: 1;
+}
+
+.img-weather img {
+  max-width: 70%;
+}
+.details {
+  width: 80%;
+  color: #f8f9fa;
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.temp {
+  margin-bottom: 10px;
+}
+.other-details {
+  color: #f8f9fa;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.col div {
+  flex-shrink: 0;
+  margin-left: 10px;
+}

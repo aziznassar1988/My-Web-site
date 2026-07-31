@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Slab:wght@244&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="logo">
+        <img src="img/logo.png" />
+        <h2>My To-Do List</h2>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ToDo List</a></li>
+        <li><a href="weather.html">Weather App</a></li>
+        <li><a href="notes.html">Notes App</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <main class="todo-list">
+      <div class="insert-task">
+        <input
+          type="text"
+          placeholder="Insert Information Task"
+          id="task-sub"
+        />
+        <a href="" class="sub">ADD</a>
+      </div>
+      <div class="todo-cont">
+        <table>
+            <thead>
+                <tr>
+                    <th>Check</th>
+                    <th>Task Subject</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="task-body">
+                
+            </tbody>
+        </table>
+        <div class="todo-links">
+            <a href="">All Task</a>
+            <a href="" class="new-tab">New Task</a>
+            <a href="" class="comp-tab">Complete Task</a>
+            <a href="" class="del-tab">Delete Task</a>
+        </div>
+    </main>
+    <footer>
+      <div class="foot-cont">
+        <div class="left-foot">
+          <div class="img-foot"><img src="img/logo.png" /></div>
+          <div class="p-foot">
+            We Build Our First Site For Learning Front-End By Using HTML AND CSS
+            AND JAVASCRIPT, We hope Your Intresting When Pagintation Our Site
+          </div>
+          <div class="social-foot">
+            <i class="fa-brands fa-facebook-f social"></i>
+            <i class="fa-brands fa-youtube social"></i>
+            <i class="fa-brands fa-x-twitter social"></i>
+          </div>
+        </div>
+        <div class="right-foot">
+          <a href="">HTML Learning</a>
+          <a href="">CSS Learning</a>
+          <a href="">JavaScript Learning</a>
+          <a href="">SASS Learning</a>
+          <a href="">TypeScript Learning</a>
+          <a href="">React Learning</a>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="js/menu.js"></script> -->
+    <script src="js/task.js"></script>
+    <!-- <script src="js/show.js"></script> -->
+  </body>
+</html>

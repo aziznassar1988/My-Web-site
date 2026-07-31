@@ -1,0 +1,21 @@
+$main-font:18px;
+$font-type:"Cinzel",sans-serif;
+
+$body-color:#f8f9fa;
+$header-color:#1a252f;
+$active-color:#fadd41;
+$text-color:#2c3e50;
+$radius-pixel: 15px;
+$radius-percentage:50%;
+$radius-btn: 5px;
+$transition: all 1s ease;
+$padd-y:10px;
+$padd-x:5px;
+$small: 767px;
+$meduim:991px;
+$large:1199px;
+%flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
